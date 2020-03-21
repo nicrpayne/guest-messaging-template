@@ -1,62 +1,48 @@
 import React, {Component} from 'react';
 import './App.css';
+import PropTypes from 'prop-types';
+import MessageItem from '../MessageItem/MessageItem'
 import Companies from '../../Data/Companies';
 import Guests from '../../Data/Guests'
 
+import {
+  Select,
+  FormControl
+}
+  from '@material-ui/core';
 
 
-class App extends Component() {
 
-  // state = {
-  //   newEntry: {
-  //     name: '',
-  //     logo: '',
-  //     url: '',
-  //     type: '',
-  //     address_number: '',
-  //     address_unit: '',
-  //     address_street: '',
-  //     city: '',
-  //     state: '',
-  //     county_id: '',
-  //     zip: '',
-  //     contact_name: '',
-  //     title: '',
-  //     phone_number: '',
-  //     phone_number_type: '',
-  //     email: '',
-  //     notes: '',
-  //     demographics_age_0_3: 0,
-  //     demographics_age_4_7: 0,
-  //     demographics_age_8_12: 0,
-  //     demographics_age_13_18: 0,
-  //     demographics_race_white: 0,
-  //     demographics_race_black: 0,
-  //     demographics_race_native: 0,
-  //     demographics_race_asian: 0,
-  //     demographics_race_pacific: 0,
-  //     demographics_poverty: 0
+class App extends Component {
 
-  //   },
-  // }
+  state = {
+    newMessage: {
+      setCompany: '',
+      setGuest: '',
+      setTemplateIndex: '',
+      setMessage: '',
+      setMessageList: ''
+    }
+  }
+
   // componentDidMount() {
   //   this.props.dispatch({
   //     type: 'FETCH_COUNTIES'
   //   })
   // }
 
-
-
   // handleChangeFor = (event, propertyName) => {
-  //   console.log('Setting state for:', event.target.value, propertyName);
+  //   console.log('Setting state for: ', event.target.value, propertyName);
   //   this.setState({
-  //     newEntry: {
-  //       ...this.state.newEntry,
+  //     newMessage: {
+  //       ...this.state.newMessage,
   //       [propertyName]: event.target.value
   //     }
   //   })
-  //   console.log(this.state.newEntry)
+  //   console.log(this.state.newMessage)
   // }
+
+
   // handleClick = async (event) => {
   //   event.preventDefault()
   //   console.log(this.state.newEntry)
@@ -74,34 +60,43 @@ class App extends Component() {
   // }
 
   render () {
+    
   return (
+    <>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+     <form>
         <div >
-          <label for='firstDropdown'>Time Unit</label>
-          <select 
-          id='firstDropdown' 
-          className='chart-select' 
-          onChange={this.handleChangeFor} 
-          style={{ width: '100px' }}>
-            <option value=''>Year</option>
-            <option value=''>Month</option>
+          <h1>Hello World!
+
+          {JSON.stringify(Companies[0].city)}
+
+          </h1>
+          <select>
+          <option></option>
+
           </select>
+            
+            {/* <span className={this.props.classes.dropdown}>County:  </span>
+            <FormControl >
+            <Select>
+              className={this.props.classes.dropdownItem}
+              native className={this.props.classes.dropdownItem}
+              onChange={(event) => this.handlChangeFor(event, 'company')}>
+              {Companies.map(taco =>
+                <option  className={this.props.classes.dropdownMenu}> {taco.company} </option>
+              )}
+            </Select>
+            </FormControl> */}
+
         </div>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </form>
+      <MessageItem/>
+      
     </div>
+    <div>
+        
+    </div>
+    </>
   );
 }
 }
