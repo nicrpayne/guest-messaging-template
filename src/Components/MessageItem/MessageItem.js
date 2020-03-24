@@ -3,6 +3,8 @@ import App from '../App/App';
 import Guests from '../../Data/Guests';
 import Companies from '../../Data/Companies';
 import '../App/App.css';
+// import '../../../public/Assets/logo.png';
+
 
 
 class MessageItem extends Component {
@@ -10,6 +12,19 @@ class MessageItem extends Component {
     render() {
         return(
             <>
+            
+            {/* <img 
+            className="logo"
+            src="../../../public/Assets/logo.png" 
+            alt="Your Guest Messenger Logo"/> */}
+            
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            
+            
                 <nav className="menu">
                     <ol>
                         <li className="menu-item">

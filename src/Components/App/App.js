@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import MessageItem from '../MessageItem/MessageItem'
 import Companies from '../../Data/Companies';
 import Guests from '../../Data/Guests'
+// import '../../../public/Assets/logo.png'
 
 import {
   Select,
@@ -67,15 +68,20 @@ class App extends Component {
      <form>
         <div >
           <h1 className="app-heading">
-              <p>Your </p>
-              <p>Guest </p>
-              <p>Messenger </p>
+              <p>Your</p>
+              <p>Guest</p>
+              <p>Messenger</p>
           {/* {JSON.stringify(Companies[0].city)} */}
           </h1>
           {/* <select>
           <option></option>
           </select> */}
-            
+          <div className="logo-div">
+            <img
+              className="logo"
+              src="logo.png"
+              alt="Your Guest Messenger Logo" />
+            </div>
             {/* <span className={this.props.classes.dropdown}>County:  </span>
             <FormControl >
             <Select>
