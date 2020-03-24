@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import App from '../App/App';
-import Guests from '../../Data/Guests';
+// import App from '../App/App';
+// import Guests from '../../Data/Guests';
 import Companies from '../../Data/Companies';
+
 import '../App/App.css';
-// import '../../../public/Assets/logo.png';
+
 
 
 
@@ -46,8 +47,8 @@ class MessageItem extends Component {
                                 <div className="dots"></div>
                             </a>
                             <ol className="sub-menu">
-                                <li className="menu-item item--a"><a href="#0" className="item--a"><span>First Step</span></a></li>
-                                <li className="menu-item item--b"><a href="#0" className="item--b"><span>Bigger Widgets</span></a></li>
+                                <li className="menu-item item--a"><a href="#0" className="item--a"><span>FIRST STEP</span></a></li>
+                                <li className="menu-item item--b"><a href="#0" className="item--b"><span>{Companies[0].company}</span></a></li>
                                 <li className="menu-item item--b"><a href="#0" className="item--c"><span>Huge Widgets</span></a></li>
                             </ol>
                         </li>

@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
 import './App.css';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import MessageItem from '../MessageItem/MessageItem'
-import Companies from '../../Data/Companies';
-import Guests from '../../Data/Guests'
+import CompanyList from '../CompanyList/CompanyList'
+// import Companies from '../../Data/Companies';
+// import Guests from '../../Data/Guests'
 // import '../../../public/Assets/logo.png'
 
-import {
-  Select,
-  FormControl
-}
-  from '@material-ui/core';
+// import {
+//   Select,
+//   FormControl
+// }
+//   from '@material-ui/core';
 
 
 
@@ -82,6 +83,7 @@ class App extends Component {
               src="logo.png"
               alt="Your Guest Messenger Logo" />
             </div>
+            <CompanyList/>
             {/* <span className={this.props.classes.dropdown}>County:  </span>
             <FormControl >
             <Select>
