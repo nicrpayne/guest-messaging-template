@@ -90,21 +90,22 @@ a {
   opacity: 0;
 }
 .menu ol li a.home {
-  background: #1681d2;
+  background: #1067aa;
 }
 .menu ol li a.about {
   background: #1a8fe7;
 }
 .menu ol li a.widgets {
-  background: #319ae9;
+  background: #1681d2;
+;
 }
 .menu ol li a.kabobs {
-  background: #48a6ec;
+  background: #1a8fe7
 }
 .menu ol li a.contact {
-  background: #5fb1ee;
+ background: #319ae9;
 }
-.menu ol li a.widgets::before, .menu ol li a.kabobs::before {
+.menu ol li a.widgets::before, .menu ol li a.kabobs::before, .menu ol li a.contact::before {
   content: "";
   display: block;
   width: 0px;
@@ -257,3 +258,8 @@ a {
   }
 }
 
+.app-heading {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #1681d2;
+}

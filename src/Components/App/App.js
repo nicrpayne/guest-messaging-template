@@ -66,15 +66,15 @@ class App extends Component {
     <div className="App">
      <form>
         <div >
-          <h1>Hello World!
-
-          {JSON.stringify(Companies[0].city)}
-
+          <h1 className="app-heading">
+              <p>Your </p>
+              <p>Guest </p>
+              <p>Messenger </p>
+          {/* {JSON.stringify(Companies[0].city)} */}
           </h1>
-          <select>
+          {/* <select>
           <option></option>
-
-          </select>
+          </select> */}
             
             {/* <span className={this.props.classes.dropdown}>County:  </span>
             <FormControl >
