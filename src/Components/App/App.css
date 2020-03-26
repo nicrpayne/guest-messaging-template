@@ -270,13 +270,19 @@ a {
   
 }
 
-.logo {
-  /* float: left; */
-  height: 200px;
-  width: 200px;
-  position: absolute;
+.logo-div {
+  float: left;
+  /* size: 10%; */
+  /* height: 10%; */
+  /* width: 50px; */
+  position: fixed;
   top: 10px;
-  right: 950px;
+  /* right: 950px; */
   opacity: 95%;
+}
+
+.logo {
+  height: 220px;
+  width: 220px;
 }
 

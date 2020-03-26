@@ -9,10 +9,10 @@ class CompanyList extends Component {
         return (
             <>
                 <ul>
-                    {this.props.Companies.map((company)=>{
+                    {/* {this.props.Companies.map((company)=>{
                         return <Company company={company}/>
 
-                    })}
+                    })} */}
                 </ul>
             </>
         )
