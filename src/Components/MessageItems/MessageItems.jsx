@@ -1,22 +1,24 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Companies from '../../Data/Companies';
 
 
-class MessageItems extends Component {
+class Company extends Component {
     render() {
         
         return (
             <>
                 <ul>
-                {Companies.map((Company) =>{
+                {/* {Companies.map((Company) =>{
                     return <Companies company={company}
                     key={company.id}/>
                 })
-                }
+                
+                    }; */}
                 </ul>
+                
             </>
         )
     }
 }
 
-export default MessageItems
+export default Company

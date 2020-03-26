@@ -1,17 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-// import PropTypes from 'prop-types';
-import MessageItem from '../MessageItem/MessageItem'
-import CompanyList from '../CompanyList/CompanyList'
-// import Companies from '../../Data/Companies';
-// import Guests from '../../Data/Guests'
-// import '../../../public/Assets/logo.png'
-
-// import {
-//   Select,
-//   FormControl
-// }
-//   from '@material-ui/core';
+import StylingComonent from '../StylingComponent/StylingComponent'
 
 
 
@@ -65,6 +54,7 @@ class App extends Component {
     
   return (
     <>
+    
     <div className="App">
      <form>
         <div >
@@ -83,7 +73,7 @@ class App extends Component {
               src="logo.png"
               alt="Your Guest Messenger Logo" />
             </div>
-            <CompanyList/>
+            <StylingComonent />
             {/* <span className={this.props.classes.dropdown}>County:  </span>
             <FormControl >
             <Select>
@@ -98,7 +88,7 @@ class App extends Component {
 
         </div>
       </form>
-      <MessageItem/>
+      
       
     </div>
     <div>

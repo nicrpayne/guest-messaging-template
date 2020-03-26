@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-// import App from '../App/App';
-// import Guests from '../../Data/Guests';
-import Companies from '../../Data/Companies';
-
 import '../App/App.css';
+import '../../Data/Companies';
+import CompanyList from '../CompanyList/CompanyList';
 
 
 
 
-class MessageItem extends Component {
+class StylingComonent extends Component {
 
     render() {
         return(
             <>
-            
+            <CompanyList/>
             {/* <img 
             className="logo"
             src="../../../public/Assets/logo.png" 
@@ -89,4 +87,4 @@ class MessageItem extends Component {
 }
 
 
-export default MessageItem;
+export default StylingComonent;
