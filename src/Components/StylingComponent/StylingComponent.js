@@ -1,22 +1,18 @@
 import React, { Component } from 'react';
 import '../App/App.css';
-import '../../Data/Companies';
-import CompanyList from '../CompanyList/CompanyList';
+// import '../../Data/Companies';
+let Companies = require('../../Data/Companies');
 
 
 
 
-class StylingComonent extends Component {
+
+
+class StylingComponent extends Component {
 
     render() {
         return(
             <>
-            <CompanyList/>
-            {/* <img 
-            className="logo"
-            src="../../../public/Assets/logo.png" 
-            alt="Your Guest Messenger Logo"/> */}
-            
             <br></br>
             <br></br>
             <br></br>
@@ -32,12 +28,7 @@ class StylingComonent extends Component {
                                 <span>Clear</span>
                             </a>
                         </li>
-                        {/* <li className="menu-item">
-                            <a href="#0" className="about">
-                                <i className="ion ion-ios-hand-outline"></i>
-                                <span>About</span>
-                            </a>
-                        </li> */}
+                      
                         <li className="menu-item">
                             <a href="#0" className="widgets">
                                 <i className="ion ion-ios-aperture-outline"></i>
@@ -45,8 +36,10 @@ class StylingComonent extends Component {
                                 <div className="dots"></div>
                             </a>
                             <ol className="sub-menu">
+                            
+                                
                                 <li className="menu-item item--a"><a href="#0" className="item--a"><span>FIRST STEP</span></a></li>
-                                <li className="menu-item item--b"><a href="#0" className="item--b"><span>{Companies[0].company}</span></a></li>
+                                <li className="menu-item item--b"><a href="#0" className="item--b"><span>{JSON.stringify(Companies[0].city)}</span></a></li>
                                 <li className="menu-item item--b"><a href="#0" className="item--c"><span>Huge Widgets</span></a></li>
                             </ol>
                         </li>
@@ -57,8 +50,9 @@ class StylingComonent extends Component {
                             </a>
                             <ol className="sub-menu">
                                 <li className="menu-item"><a href="#0" className="item--a"><span>Second Step</span></a></li>
-                                <li className="menu-item"><a href="#0" className="item--b"><span>BBQ kabobs</span></a></li>
+                                <li className="menu-item"><a href="#0" className="item--b"><span></span></a></li>
                                 <li className="menu-item"><a href="#0" className="item--c"><span>Summer kabobs</span></a></li>
+                                {/* <li> <a> <span></span> </a> </li> */}
                             </ol>
                         </li>
                         <li className="menu-item">
@@ -72,12 +66,7 @@ class StylingComonent extends Component {
                                 <li className="menu-item"><a href="#0" className="item--c"><span>Summer kabobs</span></a></li>
                             </ol>
                         </li>
-                        {/* <li className="menu-item">
-                            <a href="#0" className="contact">
-                                <i className="ion ion-ios-mail-outline"></i>
-                                <span>Contact</span>
-                            </a>
-                        </li> */}
+                   
                     </ol>
                 </nav>
 
@@ -87,4 +76,15 @@ class StylingComonent extends Component {
 }
 
 
-export default StylingComonent;
+export default StylingComponent;
+
+
+// {
+//     Companies.map((company) => {
+//         return {
+//             name: company.company,
+//             city: company.city,
+//             timezone: company.timezone
+//         }
+//     })
+// }

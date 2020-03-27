@@ -2,30 +2,32 @@ import React, {Component} from 'react';
 import Companies from '../../Data/Companies';
 import Guests from '../../Data/Guests';
 // import Company from '../Company/Company'
+// let Companies = require('../../Data/Companies');
 
 
-class Lists extends Component {
+class CompanyList extends Component {
     render() {
 
         return (
             <>
-           
+             
                 <ul>
-                    {this.props.Companies.map((company)=>{
-                        return <Companies company={company} />
-                        
-
+                    {Companies.map((company)=>{
+                        return <Companies company={company}/> 
+                        // {JSON.stringify(Companies.company)}
                     })}
                 </ul>
+                {/* 
                 <ul>
-                    {/* {this.props.Guests.map((guest)=>{
-                        return <Company company={guest}/>
+                    {Guests.map((guest)=>{
+                        return <Guest guest={guest}/>
 
-                    })} */}
-                </ul>
+                    })}
+                </ul> */}
+
                 <ul>
-                    {/* {this.props.Companies.map((company)=>{
-                        return <Company company={company}/>
+                    {/* {Companies.map((company)=>{
+                        return <Guest company={company}/>
 
                     })} */}
                 </ul>
@@ -34,4 +36,4 @@ class Lists extends Component {
     }
 }
 
-export default Lists
+export default CompanyList

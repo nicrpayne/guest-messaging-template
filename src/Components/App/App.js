@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
-import StylingComonent from '../StylingComponent/StylingComponent'
+import StylingComponent from '../StylingComponent/StylingComponent'
+import CompanyList from '../CompanyList/CompanyList'
+import Companies from '../../Data/Companies';
 
 
 
@@ -54,7 +56,7 @@ class App extends Component {
     
   return (
     <>
-    
+ 
     <div className="App">
      <form>
         <div >
@@ -62,18 +64,16 @@ class App extends Component {
               <p>Your</p>
               <p>Guest</p>
               <p>Messenger</p>
-          {/* {JSON.stringify(Companies[0].city)} */}
+              {/* <p>{JSON.stringify(Companies[1].city)}</p> */}
           </h1>
-          {/* <select>
-          <option></option>
-          </select> */}
+          
           <div className="logo-div">
             <img
               className="logo"
               src="logo.png"
               alt="Your Guest Messenger Logo" />
             </div>
-            <StylingComonent />
+            <StylingComponent />
             {/* <span className={this.props.classes.dropdown}>County:  </span>
             <FormControl >
             <Select>
