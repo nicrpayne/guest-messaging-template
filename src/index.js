@@ -4,8 +4,7 @@ import { combineReducers } from 'redux';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
-// import rootReducer from './redux/reducers'; // imports ./redux/reducers/index.js
-import displaySelectedReducer from '../src/Redux/Reducers/SelectionReducer'
+import displaySelectedReducer from '../src/Redux/Reducers/displaySelectedReducer';
 import './index.css';
 import App from '../src/Components/App/App';
 import * as serviceWorker from './serviceWorker';

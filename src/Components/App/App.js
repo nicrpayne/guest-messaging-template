@@ -4,9 +4,6 @@ import './App.css';
 let Companies = require('../../Data/Companies');
 let Guests = require('../../Data/Guests');
 let Templates = require('../../Data/Templates');
-// import StylingComponent from '../StylingComponent/StylingComponent'
-
-
 
 
 class App extends Component {
@@ -20,29 +17,37 @@ class App extends Component {
       setMessageList: ''
     }
   }
-  handleChangeFor = (event, propertyName) => {
-    console.log('Setting state for: ', event.target.value, propertyName);
-    this.setState({
+  // handleChangeFor = (event, propertyName) => {
+  //   console.log('Setting state for:', event.target.value, propertyName);
+  //   this.setState({
+  //     newEntry: {
+  //       ...this.state.newEntry,
+  //       [propertyName]: event.target.value
+  //     }
+  //   })
+  //   console.log(this.state.newEntry)
+  // }
+
+  handleClick = (event) => {
+    // event.preventDefault()
+    console.log('BROOOOOOOOOOOO selection clicked with id of: ', event)
+    this.setState ({
       newMessage: {
-        ...this.state.newMessage,
-        [propertyName]: event.target.value
+        setCompany: event.target.value
       }
     })
-    console.log(this.state.newMessage)
+    // this.props.dispatch({
+    //   type: 'COMPANY_SELECTED',
+    //   payload: event
+
+    // })
   }
-
-
-  // handleClick = (event) => {
-  //   event.preventDefault()
-  //   console.log('selection clicked with id of: ', event.city)
-    
-  // }
 
   render () {
     
   return (
     <>
- 
+      {JSON.stringify(this.props.reduxState)}
     <div className="App">
      <form>
         <div >
@@ -84,11 +89,11 @@ class App extends Component {
                   <ol className="sub-menu">
                     {Companies.map((company) => {
                       return <li key={company.id} className="menu-item item--a">
-                                <a href="#0" className="item--a">
+                                <a href="#0" className="item--a"
+                          onClick={(event) => this.handleClick(event)}>
                                   <span 
-                                  // onClick={(event) => { this.handleClick(event) }}
-                                        onClick={(event) => this.handleChangeFor(event, 'setCompany')}
-                                  >{company.company}
+                                  >
+                                    {company.company}
                                   </span>
                                 </a>
                               </li>

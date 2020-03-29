@@ -1,22 +1,22 @@
 
 
-const displaySelectedReducer = (state = { primary: '', secondary: '', tertiary: '' }, action) => {
-    // console.log('in displayEmotionEntriesReducer', action.payload);
-    if (action.type === 'PRIMARY_EMOTION_ENTRY') {
+const displaySelectedReducer = (state = { company: '', guest: '', template: '' }, action) => {
+    console.log('in displaySelectedReducer', action.payload);
+    if (action.type === 'COMPANY_SELECTED') {
         //whatever is returned will be saved in redux
         return {
             ...state,
             primary: action.payload
         }
     }
-    if (action.type === 'SECONDARY_EMOTION_ENTRY') {
+    if (action.type === 'GUEST_SELECTED') {
         //whatever is returned will be saved in redux
         return {
             ...state,
             secondary: action.payload
         }
     }
-    if (action.type === 'TERTIARY_EMOTION_ENTRY') {
+    if (action.type === 'TEMPLATE_SELECTED') {
         //whatever is returned will be saved in redux
         return {
             ...state,
