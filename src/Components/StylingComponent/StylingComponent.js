@@ -32,16 +32,21 @@ class StylingComponent extends Component {
                         <li className="menu-item">
                             <a href="#0" className="widgets">
                                 <i className="ion ion-ios-aperture-outline"></i>
-                                <span>Company</span>
+                                <span>Hotel</span>
                                 <div className="dots"></div>
                             </a>
                             <ol className="sub-menu">
-                            
-                                
-                                <li className="menu-item item--a"><a href="#0" className="item--a"><span>FIRST STEP</span></a></li>
+                                {Companies.map((company) => {
+                                    return <li key={company.id}
+                                        className="menu-item item--a">
+                                        <a href="#0" className="item--a"><span>{company.company}</span></a></li>
+
+                                })}
+                            </ol>
+                                {/* <li className="menu-item item--a"><a href="#0" className="item--a"><span>FIRST STEP</span></a></li>
                                 <li className="menu-item item--b"><a href="#0" className="item--b"><span>{JSON.stringify(Companies[0].city)}</span></a></li>
                                 <li className="menu-item item--b"><a href="#0" className="item--c"><span>Huge Widgets</span></a></li>
-                            </ol>
+                             */}
                         </li>
                         <li className="menu-item">
                             <a href="#0" className="kabobs">
