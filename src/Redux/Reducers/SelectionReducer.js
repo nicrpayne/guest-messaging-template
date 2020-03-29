@@ -26,4 +26,4 @@ const displaySelectedReducer = (state = { primary: '', secondary: '', tertiary: 
     return state;
 }
 
-export default displayEmotionEntriesReducer; 
+export default displaySelectedReducer; 
