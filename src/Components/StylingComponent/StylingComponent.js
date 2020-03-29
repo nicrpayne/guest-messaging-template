@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../App/App.css';
 // import '../../Data/Companies';
 let Companies = require('../../Data/Companies');
+let Guests = require('../../Data/Guests');
+let Templates = require('../../Data/Templates');
 
 
 
@@ -43,10 +45,6 @@ class StylingComponent extends Component {
 
                                 })}
                             </ol>
-                                {/* <li className="menu-item item--a"><a href="#0" className="item--a"><span>FIRST STEP</span></a></li>
-                                <li className="menu-item item--b"><a href="#0" className="item--b"><span>{JSON.stringify(Companies[0].city)}</span></a></li>
-                                <li className="menu-item item--b"><a href="#0" className="item--c"><span>Huge Widgets</span></a></li>
-                             */}
                         </li>
                         <li className="menu-item">
                             <a href="#0" className="kabobs">
@@ -54,10 +52,12 @@ class StylingComponent extends Component {
                                 <span>Guest</span>
                             </a>
                             <ol className="sub-menu">
-                                <li className="menu-item"><a href="#0" className="item--a"><span>Second Step</span></a></li>
-                                <li className="menu-item"><a href="#0" className="item--b"><span></span></a></li>
-                                <li className="menu-item"><a href="#0" className="item--c"><span>Summer kabobs</span></a></li>
-                                {/* <li> <a> <span></span> </a> </li> */}
+                                {Guests.map((guest) => {
+                                    return <li key={guest.id}
+                                        className="menu-item item--a">
+                                        <a href="#0" className="item--b"><span>{guest.firstName}</span></a></li>
+
+                                })}
                             </ol>
                         </li>
                         <li className="menu-item">
@@ -66,10 +66,18 @@ class StylingComponent extends Component {
                                 <span>Message</span>
                             </a>
                             <ol className="sub-menu">
+                                {Templates.map((message) => {
+                                    return <li key={message.id}
+                                        className="menu-item item--a">
+                                        <a href="#0" className="item--c"><span>{message.name}</span></a></li>
+
+                                })}
+                            </ol>
+                            {/* <ol className="sub-menu">
                                 <li className="menu-item"><a href="#0" className="item--a"><span>Third Step</span></a></li>
                                 <li className="menu-item"><a href="#0" className="item--b"><span>BBQ kabobs</span></a></li>
                                 <li className="menu-item"><a href="#0" className="item--c"><span>Summer kabobs</span></a></li>
-                            </ol>
+                            </ol> */}
                         </li>
                    
                     </ol>

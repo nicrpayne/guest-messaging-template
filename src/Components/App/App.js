@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import StylingComponent from '../StylingComponent/StylingComponent'
-import CompanyList from '../CompanyList/CompanyList'
-import Companies from '../../Data/Companies';
+
 
 
 
