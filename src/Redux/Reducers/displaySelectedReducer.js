@@ -6,21 +6,21 @@ const displaySelectedReducer = (state = { company: '', guest: '', template: '' }
         //whatever is returned will be saved in redux
         return {
             ...state,
-            primary: action.payload
+            company: action.payload
         }
     }
     if (action.type === 'GUEST_SELECTED') {
         //whatever is returned will be saved in redux
         return {
             ...state,
-            secondary: action.payload
+            guest: action.payload
         }
     }
     if (action.type === 'TEMPLATE_SELECTED') {
         //whatever is returned will be saved in redux
         return {
             ...state,
-            tertiary: action.payload
+            template: action.payload
         }
     }
     return state;

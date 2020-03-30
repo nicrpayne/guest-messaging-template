@@ -8,41 +8,6 @@ let Templates = require('../../Data/Templates');
 
 class App extends Component {
 
-  state = {
-    newMessage: {
-      setCompany: '',
-      setGuest: '',
-      setTemplateIndex: '',
-      setMessage: '',
-      setMessageList: ''
-    }
-  }
-  // handleChangeFor = (event, propertyName) => {
-  //   console.log('Setting state for:', event.target.value, propertyName);
-  //   this.setState({
-  //     newEntry: {
-  //       ...this.state.newEntry,
-  //       [propertyName]: event.target.value
-  //     }
-  //   })
-  //   console.log(this.state.newEntry)
-  // }
-
-  handleClick = (event) => {
-    // event.preventDefault()
-    console.log('BROOOOOOOOOOOO selection clicked with id of: ', event)
-    this.setState ({
-      newMessage: {
-        setCompany: event.target.value
-      }
-    })
-    // this.props.dispatch({
-    //   type: 'COMPANY_SELECTED',
-    //   payload: event
-
-    // })
-  }
-
   render () {
     
   return (
@@ -63,15 +28,12 @@ class App extends Component {
               src="logo.png"
               alt="Your Guest Messenger Logo" />
             </div>
-
             <br></br>
             <br></br>
             <br></br>
             <br></br>
             <br></br>
-
-
-            <nav className="menu">
+         <nav className="menu">
               <ol>
                 <li className="menu-item">
                   <a href="#0" className="home">
@@ -88,16 +50,16 @@ class App extends Component {
                   </a>
                   <ol className="sub-menu">
                     {Companies.map((company) => {
+                      // console.log('in map', company);
                       return <li key={company.id} className="menu-item item--a">
-                                <a href="#0" className="item--a"
-                          onClick={(event) => this.handleClick(event)}>
-                                  <span 
-                                  >
+                        <a href="#0" className="item--a"  
+                          onClick={() => this.props.dispatch({ type: 'COMPANY_SELECTED', payload: company.id })}>
+                                  <span >
                                     {company.company}
                                   </span>
                                 </a>
                               </li>
-                            })}
+                            })} 
                   </ol>
                 </li>
 
@@ -108,10 +70,14 @@ class App extends Component {
                   </a>
                   <ol className="sub-menu">
                     {Guests.map((guest) => {
-                      return <li key={guest.id}
-                        className="menu-item item--a">
-                       
-                        <a href="#0" className="item--b"><span>{guest.firstName}</span></a></li>
+                      return <li key={guest.id} className="menu-item item--a">
+                        <a href="#0" className="item--b"
+                          onClick={() => this.props.dispatch({ type: 'GUEST_SELECTED', payload: guest.id })}>
+                            <span>
+                              {guest.firstName}
+                            </span>
+                          </a>
+                        </li>
 
                     })}
                   </ol>
@@ -123,10 +89,14 @@ class App extends Component {
                   </a>
                   <ol className="sub-menu">
                     {Templates.map((message) => {
-                      return <li key={message.id}
-                        className="menu-item item--a">
-                      
-                        <a href="#0" className="item--c"><span>{message.name}</span></a></li>
+                      return <li key={message.id} className="menu-item item--a">
+                        <a href="#0" className="item--c"
+                          onClick={() => this.props.dispatch({ type: 'TEMPLATE_SELECTED', payload: message.id })}>
+                            <span>
+                              {message.name}
+                            </span>
+                        </a>
+                      </li>
                     })}
                   </ol>
                 </li>
