@@ -275,14 +275,36 @@ a {
   /* size: 10%; */
   /* height: 10%; */
   /* width: 50px; */
-  position: fixed;
+  /* position: fixed; */
   top: 10px;
   /* right: 950px; */
   opacity: 95%;
+  position: absolute;
 }
 
 .logo {
   height: 220px;
   width: 220px;
+  
 }
 
+.message-box{
+  /* text-align: left; */
+  max-width: 800px;
+  /* padding: 36px 120px; */
+  margin: 8px 0;
+  border: 20px blue;
+  /* box-sizing: border-box; */
+  border-radius: 1px;
+  opacity: 90%;
+}
+
+.message-box-div{
+  position: absolute;
+  float: right;
+  top: 8px;
+  text-align: center;
+  right: 180px;
+  width: 200px;
+  height: 120px;
+}

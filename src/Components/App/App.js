@@ -8,11 +8,29 @@ let Templates = require('../../Data/Templates');
 
 class App extends Component {
 
+
+
   render () {
     
+    function findTime() {
+      let time = new Date().getHours();
+      if (time < 12) {
+        return 'Good morning';
+      } else if (time < 16) {
+        return 'Good afternoon';
+      } else {
+        return 'Good evening';
+      }
+    }
+
+
+
+
+
+
   return (
     <>
-      {JSON.stringify(this.props.reduxState)}
+      <p>{JSON.stringify(this.props.reduxState)}</p>
     <div className="App">
      <form>
         <div >
@@ -78,7 +96,6 @@ class App extends Component {
                             </span>
                           </a>
                         </li>
-
                     })}
                   </ol>
                 </li>
@@ -105,8 +122,17 @@ class App extends Component {
         </div>
       </form> 
     </div>
-    <div>
-        
+    <div className="message-box-div">
+        <h1>Your Message</h1>
+        <textarea 
+        rows="6"
+        cols="60"
+        type="text"
+        className="message-box"
+        value={this.props.reduxState}>
+
+        </textarea>
+        {/* <p>{JSON.stringify(this.props.reduxState.displaySelectedReducer.guest)}</p> */}
     </div>
     </>
   );
