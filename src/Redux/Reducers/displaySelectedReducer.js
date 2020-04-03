@@ -1,7 +1,7 @@
 
 
-const displaySelectedReducer = (state = { company: '', guest: '', template: '' }, action) => {
-    // console.log('in displaySelectedReducer', action.payload);
+const displaySelectedReducer = (state = { company: 0, guest: 0, template: 0 }, action) => {
+    console.log('in displaySelectedReducer', action.payload);
     if (action.type === 'COMPANY_SELECTED') {
         //whatever is returned will be saved in redux
         return {

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import './App.css';
+import './App.css'; 
 let Companies = require('../../Data/Companies');
 let Guests = require('../../Data/Guests');
 let Templates = require('../../Data/Templates');
@@ -26,7 +26,7 @@ class App extends Component {
   return (
     <>
     <div className="App">
-     <form>
+     {/* <form> */}
         <div >
           <h1 className="app-heading">
               <p>Your</p>
@@ -65,7 +65,8 @@ class App extends Component {
                       // console.log('in map', company);
                       return <li key={company.id} className="menu-item item--a">
                         <a href="#0" className="item--a"  
-                          onClick={() => this.props.dispatch({ type: 'COMPANY_SELECTED', payload: company.id })}>
+                          onClick={() => { console.log('reduxState:', this.props.reduxState)
+                            this.props.dispatch({ type: 'COMPANY_SELECTED', payload: company.id })}}>
                                   <span >
                                     {company.company}
                                   </span>
@@ -114,7 +115,7 @@ class App extends Component {
               </ol>
             </nav>
         </div>
-      </form> 
+      {/* </form>  */}
     </div>
     <div className="message-box-div">
         <h1 className="message-box-heading">Your Message</h1>
@@ -123,9 +124,9 @@ class App extends Component {
         cols="60"
         type="text"
         className="message-box"
-        value={this.props.reduxState}
+        value={JSON.stringify(this.props.reduxState.displaySelectedReducer)}
         placeholder="your message will appear here">
-        {/* {JSON.stringify(this.props.reduxState.displaySelectedReducer)} */}
+        
         {/* <p>test</p> */}
         </textarea>
     </div>
@@ -134,8 +135,8 @@ class App extends Component {
 }
 }
 
-const mapReduxStateToProps = (reduxState) => {
-  return reduxState
-}
+const mapReduxStateToProps = (reduxState) => ({
+  reduxState
+})
 
 export default connect(mapReduxStateToProps)(App);
