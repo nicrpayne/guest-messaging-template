@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Message:",
+        "name": "Select Message:",
         "text": "Hey, {{firstName}} {{lastName}}, we just met you. And this is crazy. But {{roomNumber}} is your room number. So confirm your reservation maybe?"
     },
     {

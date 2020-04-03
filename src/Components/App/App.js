@@ -12,25 +12,19 @@ class App extends Component {
 
   render () {
     
-    function findTime() {
-      let time = new Date().getHours();
-      if (time < 12) {
-        return 'Good morning';
-      } else if (time < 16) {
-        return 'Good afternoon';
-      } else {
-        return 'Good evening';
-      }
-    }
-
-
-
-
-
+    // function findTime() {
+    //   let time = new Date().getHours();
+    //   if (time < 12) {
+    //     return 'Good morning';
+    //   } else if (time < 16) {
+    //     return 'Good afternoon';
+    //   } else {
+    //     return 'Good evening';
+    //   }
+    // }
 
   return (
     <>
-      <p>{JSON.stringify(this.props.reduxState)}</p>
     <div className="App">
      <form>
         <div >
@@ -123,16 +117,17 @@ class App extends Component {
       </form> 
     </div>
     <div className="message-box-div">
-        <h1>Your Message</h1>
+        <h1 className="message-box-heading">Your Message</h1>
         <textarea 
         rows="6"
         cols="60"
         type="text"
         className="message-box"
-        value={this.props.reduxState}>
-
+        value={this.props.reduxState}
+        placeholder="your message will appear here">
+        {/* {JSON.stringify(this.props.reduxState.displaySelectedReducer)} */}
+        {/* <p>test</p> */}
         </textarea>
-        {/* <p>{JSON.stringify(this.props.reduxState.displaySelectedReducer.guest)}</p> */}
     </div>
     </>
   );

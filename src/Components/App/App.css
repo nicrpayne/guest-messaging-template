@@ -303,8 +303,12 @@ a {
   position: absolute;
   float: right;
   top: 8px;
-  text-align: center;
   right: 180px;
   width: 200px;
   height: 120px;
+}
+
+.message-box-heading{
+  text-align: right;
+  margin-left: 60px;
 }
