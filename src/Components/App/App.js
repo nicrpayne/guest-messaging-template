@@ -12,16 +12,27 @@ class App extends Component {
 
   render () {
     
-    // function findTime() {
-    //   let time = new Date().getHours();
-    //   if (time < 12) {
-    //     return 'Good morning';
-    //   } else if (time < 16) {
-    //     return 'Good afternoon';
-    //   } else {
-    //     return 'Good evening';
-    //   }
-    // }
+    function findTime() {
+      let time = new Date().getHours();
+      if (time < 12) {
+        return 'Good morning';
+      } else if (time < 16) {
+        return 'Good afternoon';
+      } else {
+        return 'Good evening';
+      }
+    }
+
+    function makeReadableDate(date) {
+      return `${date.getMonth()}/${date.getDay()}/${date.getFullYear()} at ${date.getHours()}:${date.getMinutes()}`
+    }
+
+
+
+
+
+
+    
 
   return (
     <>
